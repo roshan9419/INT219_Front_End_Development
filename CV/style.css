@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #525659;
+    justify-content: center;
+    display: flex;
+}
+
+.page {
+    background-color: white;
+    margin: 20px;
+    width: 60%;
+    padding: 20px;
+    box-shadow: 10px;
+}
+
+/* .header {} */
+
+.headerName {
+    font-size: 50px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.headerDesc {
+    margin-bottom: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #292929;
+}

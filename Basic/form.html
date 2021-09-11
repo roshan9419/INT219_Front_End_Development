@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Forms</title>
+</head>
+<body>
+    <center>
+        <h1>Contact Us</h1>
+
+        <!-- TASK IMPLEMENT ALL THE INPUTS -->
+        <form action="www.google.com">
+            <input type="text" placeholder="First Name" maxlength="20">
+            <input type="text" placeholder="Last Name" maxlength="20"> <br>
+            <input type="email" placeholder="E-mail" id="email"><br>
+            <input type="checkbox" name="cb1">
+            <label for="cb1">I agree to the Terms & Conditions</label><br>
+            <input type="reset" placeholder="Reset" class="inpBtn resetBtn">
+            <input type="submit" value="Submit Application" class="inpBtn submitBtn">
+        </form>
+    </center>
+    
+</body>
+</html>
+
+<style>
+    
+    input {
+        padding: 10px 20px; margin: 10px; border: solid 2px; border-radius: 5px;
+    }
+    
+    #email {
+        width: 380px;
+    }
+
+    .inpBtn {
+        border: 0px;
+        color: white;
+    }
+
+    .resetBtn {
+        background-color: slategrey;
+    }
+
+    .submitBtn {
+        background-color: rgb(48, 146, 226);
+    }
+
+</style>
