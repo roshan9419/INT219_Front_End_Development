@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive HTML</title>
+</head>
+
+<body>
+    <style>
+        button {
+            padding: 20px;
+            font-size: 40px;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+
+    <button onclick="onBtnClick(false)">-</button>
+    <button onclick="onBtnClick(true)">+</button>
+    <button onclick="hideUnhide(true)">Hide</button>
+    <button onclick="hideUnhide(false)">Un-Hide</button>
+    <center>
+        <div id="title">Hello, World!</div>
+    </center>
+
+    <button onclick="changeBulbImg(true)">Turn ON</button>
+    <img id="myBulb"
+        src="https://previews.123rf.com/images/ericmilos/ericmilos0912/ericmilos091200136/6109526-3d-render-of-light-bulb-on-white.jpg"
+        alt="Bulb" onmouseover="changeBulbImg(true)" onmouseout="changeBulbImg(false)">
+    <button onclick="changeBulbImg(false)">Turn OFF</button>
+
+    <script>
+        let cnt = 10
+        function onBtnClick(val) {
+            val ? cnt += 10 : cnt -= 10
+            if (cnt <= 0) cnt = 10
+            document.getElementById('title').style = `font-size: ${cnt}px;`
+        }
+
+        function hideUnhide(val) {
+            document.getElementById('title').style = `visibility: ${val ? "hidden" : "visible"}; font-size: ${cnt}px;`
+        }
+
+        function changeBulbImg(isON) {
+            const bulbOn = "https://previews.123rf.com/images/murika/murika1511/murika151100069/48123160-bright-glowing-incandescent-light-bulb-on-a-white-background.jpg"
+            const bulbOff = "https://previews.123rf.com/images/ericmilos/ericmilos0912/ericmilos091200136/6109526-3d-render-of-light-bulb-on-white.jpg"
+
+            document.getElementById("myBulb").src = isON ? bulbOn : bulbOff
+        }
+    </script>
+</body>
+
+</html>
