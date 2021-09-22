@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    
+    <button onclick="startTimer()">Start Timer</button>
+    <button onclick="cancelTimer()">Cancel Timer</button>
+
+    <script>
+        let myTimer;
+        function startTimer() {
+            // setInterval()
+            myTimer = setTimeout(() => alert("Time Done"), 5000)
+        }
+        function cancelTimer() {
+            clearTimeout(myTimer)
+            alert("Timer Stopped")
+        }
+    </script>
+</body>
+</html>
