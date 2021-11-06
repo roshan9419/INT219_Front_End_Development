@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Started</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <p id='id1'>Hello, ID</p>
+    <p class='class1'>Hello, CLASS</p>
+
+
+    <p><b>Para 1</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum facilis suscipit. Aliquid quibusdam magni
+        quaerat recusandae ab sint ipsam perferendis explicabo nam, quo reprehenderit nulla, accusantium maxime illo
+        obcaecati?</p>
+
+    <p><b>Para 2</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum facilis suscipit. Aliquid quibusdam magni
+        quaerat recusandae ab sint ipsam perferendis explicabo nam, quo reprehenderit nulla, accusantium maxime illo
+        obcaecati?</p>
+
+    <p><b>Para 3</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum facilis suscipit. Aliquid quibusdam magni
+        quaerat recusandae ab sint ipsam perferendis explicabo nam, quo reprehenderit nulla, accusantium maxime illo
+        obcaecati?</p>
+
+    <p><b>Para 4</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum facilis suscipit. Aliquid quibusdam magni
+        quaerat recusandae ab sint ipsam perferendis explicabo nam, quo reprehenderit nulla, accusantium maxime illo
+        obcaecati?</p>
+
+    <div>
+        Name: <input type="text" name="fullname">
+        Email: <input type="text" name="email">
+        <button>Hello</button>
+    </div>
+
+    <br>
+
+    <p id="text">This is a para having <b>bold</b> text</p>
+
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+
+    <script>
+        // console.log($);
+        // $('p').click(() => console.log('Hey, you clicked me'))
+        // $('p').click(function () { $(this).hide() });
+        $('#id1').dblclick(function() { console.log('You clicked an element having ID') }) //$(id1)
+        $('.class1').click(function() { console.log('You clicked an element having CLASS') })
+
+        $('#id1').css("border", "10px solid red");
+
+        // :input - for all inputs, input - for only input
+        $(":input").focus(function(){
+            $(this).css("background-color","green");
+        });
+        $(":input").blur(function(){
+            $(this).css("background-color","yellow");
+        });
+
+        $("#btn1").click(function() {
+            alert("TEXT: " + $("#text").text());
+        });
+        $("#btn2").click(function() {
+            alert("HTML: " + $("#text").html());
+        });
+
+        $("button").click(function() {
+            $('#id1').fadeIn(); // Normal
+            $('#id1').fadeIn("slow"); // Slow
+            $('#id1').fadeIn(3000); // Custom
+        });
+    </script>
+</body>
+
+</html>
+<!-- 
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+alert("Value: " + $("#test").val());
+});
+});
+</script>
+</head>
+<body>
+
+<p>Name: <input type="text" id="test" value="Hello CSE"></p>
+
+<button>Show Value</button>
+
+</body> -->
