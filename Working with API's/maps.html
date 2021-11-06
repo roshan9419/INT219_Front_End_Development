@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps</title>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+</head>
+<body>
+    <h1>Google Maps</h1>
+    <div id="map" style="width: 600px; height: 400px;"></div>
+    <script>
+        const params = { center: {lat: 31.258189, lng: 75.707936}, zoom: 15 };
+        const map = new google.maps.Map(document.getElementById('map'), params);
+        const pos1 = { position: {lat: 31.258189, lng: 75.707936}, map: map };
+        const marker = new google.maps.Marker(pos1);
+    </script>
+</body>
+</html>
