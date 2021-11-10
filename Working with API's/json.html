@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            name: "Roshan Kumar",
+            prof: "Software Developer",
+            experience: 5,
+            skills: [
+                'Kotlin',
+                'Flutter',
+                'Firebase',
+                'NodeJs'
+            ],
+            taxes: {
+                apple: {
+                    igst: 5,
+                    cgst: 2.5,
+                    sgst: 2.5
+                },
+                mango: {
+                    igst: 10,
+                    cgst: 5,
+                    sgst: 5
+                }
+            }
+        };
+
+        console.log(obj);
+
+        let strObj = JSON.stringify(obj);
+        console.log(strObj);
+
+        strObj = strObj.replace("Roshan Kumar", "Roshan");
+
+        obj = JSON.parse(strObj);
+        obj.experience = 6;
+        console.log(obj);
+
+
+    </script>
+</body>
+
+</html>
